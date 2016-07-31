@@ -1,23 +1,4 @@
-const ProjectSummaryComponent = React.createClass({
-    render: function() {
-        return (
-            <div>
-                <img src="images/project1.png"></img>
-                <ProjectSummaryDetails />
-            </div>
-        );
-    },
-});
-
-const ProjectSummaryDetails = React.createClass({
-    render: function() {
-        return (
-            <div>
-                ProjectSummaryDetails Component
-            </div>
-        );
-    },
-});
+import { ProjectSummaryComponent } from 'components/ProjectSummaryComponent';
 
 ReactDOM.render(
     <ProjectSummaryComponent />,
