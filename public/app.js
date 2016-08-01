@@ -13,7 +13,25 @@ const ProjectSummaryDetails = React.createClass({
     render: function() {
         return (
             <div>
-                ProjectSummaryDetails Component
+                <ProjectHeader 
+                    title = "Learn React!"
+                    instructor = "Chris Lankford"
+                />
+                {/*
+                <ProjectTimeline />
+                <Tags />
+                */}
+            </div>
+        );
+    },
+});
+
+const ProjectHeader = React.createClass({
+    render: function() {
+        return (
+            <div>
+                {this.props.title}
+                {this.props.instructor}
             </div>
         );
     },
