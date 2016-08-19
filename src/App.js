@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Router, Route, Link, hashHistory } from 'react-router';
+import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
 import './App.css';
 import Test from './Components/Test.js';
 
 const Home = (props) => <div><h1>Home</h1><Links/>{props.children}</div>;
 const About = () => <div><h1>About</h1></div>;
-const Contact = () => <div><h1>Contact</h1><Links/></div>;
+const Contact = () => <div><h1>Contact</h1></div>;
 
 const Links = () =>
   <nav>
@@ -20,9 +20,9 @@ class App extends Component {
       <div>
         <Router history={ hashHistory }>
           <Route path="/" component={Home}>
-            <Route path="about" component={About}></Route>
+            <IndexRoute component={About}></IndexRoute>
+            <Route path="contact" component={Contact}></Route>
           </Route>
-          <Route path="/contact" component={Contact}></Route>
         </Router>
         <Test></Test>
       </div>
