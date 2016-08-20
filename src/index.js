@@ -1,5 +1,8 @@
+// React
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+
+// Styles
 import './index.css';
 
 // Part of Material-UI
