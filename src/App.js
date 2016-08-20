@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
-import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, Link, hashHistory } from 'react-router';
 import './App.css';
 import Test from './Components/Test.js';
+
+// Part of Material-UI
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const Home = (props) => <div><h1>Home</h1><Links/>{props.children}</div>;
 const About = () => <div><h1>About</h1></div>;
@@ -20,7 +42,7 @@ class App extends Component {
       <div>
         <Router history={ hashHistory }>
           <Route path="/" component={Home}>
-            <IndexRoute component={About}></IndexRoute>
+            <Route path="about" component={About}></Route>
             <Route path="contact" component={Contact}></Route>
           </Route>
         </Router>
