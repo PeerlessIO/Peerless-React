@@ -1,6 +1,5 @@
 // React
 import React, { Component } from 'react';
-import './App.css';
 import { Link } from 'react-router';
 
 // Material-UI Components
@@ -19,7 +18,7 @@ class App extends Component {
             </ToolbarGroup>
             <ToolbarGroup>
               <FlatButton label="Login" containerElement={<Link to="/login" />} />
-              <FlatButton label="Sign up" />
+              <FlatButton label="Sign up" containerElement={<Link to="/signup" />}/>
             </ToolbarGroup>
           </Toolbar>
           {this.props.children}

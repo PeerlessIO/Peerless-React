@@ -1,5 +1,6 @@
 // React
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -20,7 +21,7 @@ class Login extends Component {
             />
           </div>
           <div>
-            <RaisedButton label="Sign In" />
+            <RaisedButton label="Sign In" containerElement={<Link to="/dashboard" />} />
           </div>
         </div>
     );

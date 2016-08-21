@@ -19,6 +19,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import App from './App.js';
 import Login from './Components/Login.js';
 import Landing from './Components/Landing.js';
+import Dashboard from './Components/Dashboard.js';
+import SignUp from './Components/SignUp.js';
 
 class Main extends Component {
   render() {
@@ -28,6 +30,8 @@ class Main extends Component {
             <Route path="/" component={App}>
               <IndexRoute component={Landing}></IndexRoute>
               <Route path="login" component={Login}></Route>
+              <Route path="dashboard" component={Dashboard}></Route>
+              <Route path="signup" component={SignUp}></Route>
             </Route>
           </Router>
         </MuiThemeProvider>
