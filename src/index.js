@@ -1,6 +1,7 @@
 // React
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // Styles
 import './index.css';
@@ -16,12 +17,19 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 // Import Components
 import App from './App.js';
+import Login from './Components/Login.js';
+import Landing from './Components/Landing.js';
 
 class Main extends Component {
   render() {
     return (
         <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-            <App />
+          <Router history={ hashHistory }>
+            <Route path="/" component={App}>
+              <IndexRoute component={Landing}></IndexRoute>
+              <Route path="login" component={Login}></Route>
+            </Route>
+          </Router>
         </MuiThemeProvider>
     );
   }
