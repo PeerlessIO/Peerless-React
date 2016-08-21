@@ -6,6 +6,9 @@ import { Link } from 'react-router';
 // Material-UI Components
 import { Toolbar, ToolbarTitle, ToolbarGroup } from 'material-ui/Toolbar';
 import FlatButton from 'material-ui/FlatButton';
+import FontIcon from 'material-ui/FontIcon';
+import IconButton from 'material-ui/IconButton';
+import ActionHome from 'material-ui/svg-icons/action/home';
 
 class App extends Component {
   render() {
@@ -13,7 +16,9 @@ class App extends Component {
         <div>
           <Toolbar>
             <ToolbarGroup>
-              <ToolbarTitle text="Peerless" />
+              <Link to="/">
+                <ToolbarTitle text="Peerless" />
+              </Link>
             </ToolbarGroup>
             <ToolbarGroup>
               <FlatButton label="Login" containerElement={<Link to="/login" />} />
