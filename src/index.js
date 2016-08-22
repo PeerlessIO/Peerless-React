@@ -21,6 +21,8 @@ import Login from './Components/Login.js';
 import Landing from './Components/Landing.js';
 import Dashboard from './Components/Dashboard.js';
 import SignUp from './Components/SignUp.js';
+import ProjectList from './Components/ProjectList.js';
+import ProjectDetail from './Components/ProjectDetail.js';
 
 class Main extends Component {
   render() {
@@ -32,6 +34,8 @@ class Main extends Component {
               <Route path="login" component={Login}></Route>
               <Route path="dashboard" component={Dashboard}></Route>
               <Route path="signup" component={SignUp}></Route>
+              <Route path="projectlist" component={ProjectList}></Route>
+              <Route path="projectdetail" component={ProjectDetail}></Route>
             </Route>
           </Router>
         </MuiThemeProvider>

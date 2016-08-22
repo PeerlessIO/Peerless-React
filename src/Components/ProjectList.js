@@ -5,19 +5,19 @@ import { Link } from 'react-router';
 // Material-UI Componnets
 import RaisedButton from 'material-ui/RaisedButton';
 
-class Dashboard extends Component {
+class ProjectList extends Component {
   render() {
     return (    
         <div>
           <div>
-            This is the user dashboard component!
+            This is the projects search & list component!
           </div>
           <div>
-            <RaisedButton label="Search" containerElement={<Link to="/projectlist" />} />
+            <RaisedButton label="Select" containerElement={<Link to="/projectdetail" />} />
           </div>
         </div>
     );
   }
 }
 
-export default Dashboard;
+export default ProjectList;
