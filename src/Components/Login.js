@@ -1,26 +1,28 @@
 // React
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-class Login extends Component {
+const Login = React.createClass({
   
-  handleSignIn() {
-    console.log("Handling Sign In Event...");
-  }
+  handleSignIn: function() {
+    console.log(`Logging in with {Username: ${this.refs.usernameInput.getValue()}, Password: ${this.refs.passwordInput.getValue()})}`);
+  },
 
-  render() {
+  render: function() {
     return (    
         <div>
           <div>
             <TextField
-              hintText="Username"
+              ref='usernameInput'
+              hintText='Username'
             />
           </div>
           <div>
             <TextField
+              ref='passwordInput'
               hintText="Password"
               type="password"
             />
@@ -34,7 +36,7 @@ class Login extends Component {
         </div>
     );
   }
-  
-}
+
+});
 
 export default Login;
