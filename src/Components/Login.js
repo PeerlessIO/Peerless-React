@@ -6,6 +6,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 class Login extends Component {
+  
+  handleSignIn() {
+    console.log("Handling Sign In Event...");
+  }
+
   render() {
     return (    
         <div>
@@ -21,11 +26,15 @@ class Login extends Component {
             />
           </div>
           <div>
-            <RaisedButton label="Sign In" containerElement={<Link to="/dashboard" />} />
+            <RaisedButton 
+              label="Sign In" 
+              containerElement={<Link to="/dashboard" />} 
+              onClick={this.handleSignIn}/>
           </div>
         </div>
     );
   }
+  
 }
 
 export default Login;
